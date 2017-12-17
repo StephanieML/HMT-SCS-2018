@@ -1,3 +1,8 @@
+---
+layout: home
+title: The Homer Multitext project
+---
+
 # Using N-Grams to Explore Formulaic Language #
 
 ## What is an n-gram ##
