@@ -1,3 +1,8 @@
+---
+layout: home
+title: The Homer Multitext project
+---
+
 # Using the HMT data in the CITE environment #
 
 ## How to use URNs for citable data ##
