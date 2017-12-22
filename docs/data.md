@@ -1,9 +1,9 @@
 ---
-layout: home
-title: The Homer Multitext project
+layout: page
+title: Data structures
 ---
 
-# How Homer Multitext structures its data and why its awesome
+How Homer Multitext structures its data and why it's awesome
 
 ## Object, Text, Artifact Triangle
 

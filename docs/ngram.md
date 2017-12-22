@@ -1,9 +1,9 @@
 ---
-layout: home
-title: The Homer Multitext project
+layout: page
+title: N-grams
 ---
 
-# Using N-Grams to Explore Formulaic Language #
+Using N-Grams to Explore Formulaic Language #
 
 ## What is an n-gram ##
 
@@ -18,4 +18,3 @@ explanation
 example 1
 
 example 2
-
