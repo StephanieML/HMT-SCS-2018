@@ -3,10 +3,9 @@ layout: page
 title: Using markdown to display data
 ---
 
-## Using markdown to display data
 
-### what is markdown
+## what is markdown
 
-### how are we using it
+## how are we using it
 
-### where you can find the scripts
+## where you can find the scripts
