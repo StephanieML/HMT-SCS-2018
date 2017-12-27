@@ -6,7 +6,8 @@ title: Citation
 ## Using the HMT data in the CITE environment #
 
 ### How to use URNs for citable data ##
--[Cite Environment](can we have a link here please, Neel/Chris?)
+
+- [Cite Environment](can we have a link here please, Neel/Chris?)
 
 ### What does a URN Mean...##
 
