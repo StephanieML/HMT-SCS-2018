@@ -7,9 +7,7 @@ title: Citation
 
 ### How to use URNs for citable data ##
 
-- [Cite Environment](http://cite-architecture.github.io/about/):
-    -   [CTS URNs]()
-    -   [CITE2 URNS]()
+- [Cite Environment](can we have a link here please, Neel/Chris?)
 
 ### What does a URN Mean...##
 
