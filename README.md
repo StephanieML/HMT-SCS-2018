@@ -25,3 +25,8 @@ The root directory of this repository has a build file that resolves HMT project
 
 1.  Start an interactive console:  `sbt console`
 2.  From the console, load a script, e.g., `:load scripts/writeImageTable.sc` (note the colon preceding the `load` command!)
+
+
+## For repository managers
+
+Information about how to build the workshop web site is in the [project wiki](https://github.com/StephanieML/HMT-SCS-2018/wiki).
