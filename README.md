@@ -24,7 +24,7 @@ Data sets are in CEX format in the `data` directory.  See the README there for d
 The root directory of this repository has a build file that resolves HMT project code libraries with their dependencies, so from the root directory of the repository, you can:
 
 1.  Start an interactive console:  `sbt console`
-2.  From the console, load a script, e.g., `:load scripts/writeImageTable.sc` (note the colon preceding the `load` command!)
+2.  From the console, load a script, e.g., `:load scripts/scholia.sc` (note the colon preceding the `load` command!)
 
 
 ## For repository managers
