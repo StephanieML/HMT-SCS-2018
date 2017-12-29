@@ -2,10 +2,6 @@
 #!ctscatalog
 urn#citationScheme#groupName#workTitle#versionLabel#exemplarLabel#online#lang
 urn:cts:greekLit:tlg5026.msA.hmt:#book,comment,section#Scholia Vetera in Iliadem#Main scholia to Venetus A#Homer Multitext##true#grc
-urn:cts:greekLit:tlg5026.msAint.hmt:#book,comment,section#Scholia Vetera in Iliadem#Interior scholia to Venetus A#Homer Multitext##true#grc
-urn:cts:greekLit:tlg5026.msAim.hmt:#book,comment,section#Scholia Vetera in Iliadem#Intermarginal scholia to Venetus A#Homer Multitext##true#grc
-urn:cts:greekLit:tlg5026.msAext.hmt:#book,comment,section#Scholia Vetera in Iliadem#Exterior scholia to Venetus A#Homer Multitext##true#grc
-urn:cts:greekLit:tlg5026.msAil.hmt:#book,comment,section#Scholia Vetera in Iliadem#Interlinear scholia to Venetus A#Homer Multitext##true#grc
 urn:cts:greekLit:tlg0012.tlg001.msA.tokens:#book,line,token#Homeric poetry#Iliad#HMT tokenized diplomatic edition with scribal corrections#HMT tokens#true#grc
 
 
