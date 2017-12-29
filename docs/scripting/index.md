@@ -9,6 +9,8 @@ We'll use a library modelling the relationships of text, image and physical surf
 
 ```scala
 import edu.holycross.shot.dse._
+import edu.holycross.shot.ohco2._
+import edu.holycross.shot.citerelation._
 ```
 
 

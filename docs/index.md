@@ -11,4 +11,4 @@ Welcome to the Homer Multitext project Digital Maker Spaces Panel!
 -   [Let's talk about data structure with Brian Clark and Stephanie Lindeborg](data)
 -   [CITE environment: Using generic tools on well-structured data](cite)
 -   [n-grams!](ngram)
--   [querying data and viewing with markdown](md)
+-   [displaying the data with markdown](md)
