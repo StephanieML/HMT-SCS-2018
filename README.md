@@ -40,7 +40,7 @@ The root directory of this repository has a build file that resolves HMT project
     facsimile("urn:cite2:hmt:msA:")
     facsimile("urn:cite2:hmt:msA:", 4) // formats display in 4 columns
 
-**Identify all scholia on a page***:  from the sbt console,
+**Identify all scholia on a page**:  from the sbt console,
 
 TBA
 
