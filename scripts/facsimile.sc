@@ -36,7 +36,7 @@ def imgLinkForPage(u: Cite2Urn, defaultImageIndex: Vector[IllustratedPage] =  de
       val binary = s"${base}${img.namespace}/${img.collection}/${img.version}/${img.dropExtensions.objectOption.get}.tif&" + s"WID=${width}&CVT=JPEG"
 
 
-      s"![${img}](${binary})"
+      s"[![${img}](${binary})](${ict2}${img})"
       //s"<${binary}>"
     }
     case _ => s"Found ${imgs.size} images for ${u}"
@@ -45,7 +45,7 @@ def imgLinkForPage(u: Cite2Urn, defaultImageIndex: Vector[IllustratedPage] =  de
 }
 
 // Create simple facsimile view for a codex identified by URN
-def writeFacsimile(u: Cite2Urn): Unit = {
+def writeFacsimile(u: Cite2Urn, columnWidth: Int): Unit = {
   println("Writing facsimile for " + u + "...")
 
 //  val modelText = Source.fromFile(facsimileMap(u.collection)).getLines.mkString("\n")
@@ -54,19 +54,19 @@ def writeFacsimile(u: Cite2Urn): Unit = {
   val stringValues = modelCex.blockString("citedata").split("\n").drop(1).map(_.split("#").toVector)
   val pages = stringValues.map(ar => LabelledPage( Cite2Urn(ar(1)), ar(3) ))
 
-
+  val maxModulus = columnWidth - 1
   val tableBody = for  (i <- 0 until pages.size) yield {
-    val columnWidth = 5
-
     val pg = pages(i)
-    (i % columnWidth) match {
-      case 4 =>  s"| ${imgLinkForPage(pg.u)}<br/>" + pg.label + " |\n"
-      case _ => s"| ${imgLinkForPage(pg.u )}<br/>" + pg.label
+
+    if  (i % columnWidth == maxModulus) {
+      s"| ${imgLinkForPage(pg.u)}<br/>" + pg.label + " |\n"
+    } else {
+      s"| ${imgLinkForPage(pg.u )}<br/>" + pg.label
     }
   }
 
 
-  val tableHeader = "| 1     | 2     | 3 | 4 | 5|\n| :------------- | :------------- | :------------- |:------------- |:------------- |\n"
+  val tableHeader = "|      |      |  |  | |\n| :------------- | :------------- | :------------- |:------------- |:------------- |\n"
 
   val label = "# Codex " + u + "\n\n"
   val content = s"${label}${tableHeader}${tableBody.mkString("")}"
@@ -75,10 +75,10 @@ def writeFacsimile(u: Cite2Urn): Unit = {
   println("Facsimile view written to " + fileName)
 }
 
-def facsimile(codex: String): Unit = {
+def facsimile(codex: String, cols: Int = 5): Unit = {
   try {
     val urn = Cite2Urn(codex)
-    writeFacsimile(urn)
+    writeFacsimile(urn, cols)
 
 
   } catch {
@@ -91,5 +91,7 @@ println("\n\nGive one of the following URNs for a codex to the `facsimile` funct
 for (siglum <- facsimileMap.keySet) {
   println("\turn:cite2:hmt:" + siglum + ":")
 }
-println("\nExample:")
-println("\tfacsimile" + """("urn:cite2:hmt:msA:")""" + "\n\n")
+println("\nOptionally, you may specify a number of columns for the resulting table (default: 5).")
+println("\nExamples:")
+println("\tfacsimile" + """("urn:cite2:hmt:msA:")""")
+println("\tfacsimile" + """("urn:cite2:hmt:msA:", 4)""" + " // prints in 4 columns\n\n")
