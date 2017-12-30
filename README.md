@@ -29,12 +29,12 @@ The root directory of this repository has a build file that resolves HMT project
 
 ### Examples of included scripts
 
-**Display scholia for an *Iliad* line***:  from the sbt console,
+**Display scholia for an *Iliad* line**:  from the sbt console,
 
     :load scripts/scholia.sc
     scholia("urn:cts:greekLit:tlg0012.tlg001:1.1")
 
-**Create a facsimile for a codex***:  from the sbt console,
+**Create a facsimile for a codex**:  from the sbt console,
 
     :load scripts/facsimile.sc
     facsimile("urn:cite2:hmt:msA:")
