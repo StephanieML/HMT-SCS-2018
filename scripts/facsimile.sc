@@ -69,7 +69,8 @@ def writeFacsimile(u: Cite2Urn, columnWidth: Int): Unit = {
   val tableHeader = "|      |      |  |  | |\n| :------------- | :------------- | :------------- |:------------- |:------------- |\n"
 
   val label = "# Codex " + u + "\n\n"
-  val content = s"${label}${tableHeader}${tableBody.mkString("")}"
+  val instructions = "Images are linked to zoomable versions in the HMT Image Citation Tool\n\n"
+  val content = s"${label}${instructions}${tableHeader}${tableBody.mkString("")}"
   val fileName =  "views/facsimile-" + u.collection + ".md"
   new PrintWriter(new File(fileName)) {write (content); close}
   println("Facsimile view written to " + fileName)
