@@ -1,3 +1,4 @@
-Adding some temporary data to use with scala scripts in `scripts` directory.
+Data sets drawn from full release are in the `release` folder.
 
-Will replace these with full release versions after updated release of 19 books of Venetus A.
+
+Data sets for *Iliad* 1 only are in the `sample` folder.

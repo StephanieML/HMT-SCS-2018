@@ -90,6 +90,32 @@ def tableRowForText(u: CtsUrn) : String = {
     }
 }
 
+
+// Write a markdown table for scholia commenting
+// on an Iliad line identified by URN
+def pageContents(u: CtsUrn): String = {
+  val label = "Scholia to *Iliad* " + u.passageComponent
+  val scholiaVector = scholiaForPassage(u)
+  val imageUrns = scholiaVector.map(documentaryImage(_)).flatten
+
+  val ict2 = "http://www.homermultitext.org/ict2?urn="
+  val pageOverlay = ict2 + imageUrns.mkString("&urn=")
+
+
+  val instructions = "Images are linked to highlighted zoomable versions in context.\n\n" +
+  s"See [all scholia highlighted on page image](${pageOverlay})\n\n"
+
+  val tableHeader = "| URN     | Text     | Image |\n| :------------- | :------------- | :------------- |\n"
+  val tableRows = scholiaVector.map(tableRowForText(_))
+
+  val subhead = scholiaVector.size match {
+    case 1 => "## Total: 1 scholion"
+    case n : Int => "## Total: " + n + " scholia"
+  }
+
+  s"# $label\n\n${instructions}${subhead}\n\n${tableHeader}" + tableRows.mkString("\n") +"\n"
+}
+
 /**  Write a markdown report on scholia commenting on a given line.
 *
 * @param psg Passage of Iliad to report on.
@@ -97,31 +123,24 @@ def tableRowForText(u: CtsUrn) : String = {
 def scholia(psg: String): Unit = {
   try {
     val psgUrn = CtsUrn(psg)
-    val scholiaVector = scholiaForPassage(psgUrn)
-    val imageUrns = scholiaVector.map(documentaryImage(_)).flatten
-
-    val ict2 = "http://www.homermultitext.org/ict2?urn="
-    val pageOverlay = ict2 + imageUrns.mkString("&urn=")
-
     val label = "Scholia to *Iliad* " + psgUrn.passageComponent
-    val instructions = "Images are linked to highlighted zoomable versions in context.\n\n" +
-    s"See [all scholia highlighted on page image](${pageOverlay})\n\n"
 
 
+    val scholiaVector = scholiaForPassage(psgUrn)
+    val fileContents = scholiaVector.size match {
+      case 0 => s"# ${label}\n\nNo matching scholia\n"
+      case _ => pageContents(psgUrn)
+    }
 
-    val tableHeader = "| URN     | Text     | Image |\n| :------------- | :------------- | :------------- |\n"
-    val tableRows = scholiaVector.map(tableRowForText(_))
-
-    val fileContents = s"# $label\n\n${instructions}${tableHeader}" + tableRows.mkString("\n") +"\n"
     val fileName =  "views/iliad-" + psgUrn.passageComponent + "-scholia.md"
     new PrintWriter(new File(fileName)) { write(fileContents); close }
-
     println("Report on " + label + " written in " + fileName)
+
+
   } catch {
     case badurn: java.lang.IllegalArgumentException => println("Failed to make URN from string " + psg + ".\n" + badurn)
     case t: Throwable => println("Failed... " + t)
   }
-
 }
 
 println("\n\nGive an Iliad URN to the `scholia` function to view scholia on that passage.")
