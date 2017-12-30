@@ -13,8 +13,6 @@ val dseCex =  "data/sample/va1-dse.cex"
 
 
 
-val ict2 = "http://www.homermultitext.org/ict2/"
-
 import edu.holycross.shot.ohco2._
 import edu.holycross.shot.citerelation._
 import edu.holycross.shot.cite._
@@ -84,14 +82,14 @@ def imgLink(u: Cite2Urn) : String = {
 }
 
 def tableRowForText(u: CtsUrn) : String = {
-documentaryImage(u) match {
-    case None => "| " + u + " | " + citedText(u ) + " | |"
-    case imgUrn : Option[Cite2Urn] =>
-      "| " + u + " | " + citedText(u ) + s" | ![${u}](" + imgLink( imgUrn.get) +") |"
-  }
 
 
-
+  val ict2 = "http://www.homermultitext.org/ict2?urn="
+  documentaryImage(u) match {
+      case None => "| " + u + " | " + citedText(u ) + " | |"
+      case imgUrn : Option[Cite2Urn] =>
+          "| " + u + " | " + citedText(u ) + s" | [![${u}](" + imgLink( imgUrn.get) + s")](${ict2}${imgUrn.get}) |"
+    }
 }
 
 /**  Write a markdown report on scholia commenting on a given line.
@@ -103,17 +101,12 @@ def scholia(psg: String): Unit = {
     val psgUrn = CtsUrn(psg)
     val scholiaVector = scholiaForPassage(psgUrn)
 
-    val label = "*Iliad* " + psgUrn.passageComponent
+    val label = "Scholia to *Iliad* " + psgUrn.passageComponent
 
     val tableHeader = "| URN     | Text     | Image |\n| :------------- | :------------- | :------------- |\n"
     val tableRows = scholiaVector.map(tableRowForText(_))
-    //for (s <- scholiaVector) {
-      //println("scholia: " + scholiaVector.map(s => citedText(s)))
-      //println("On Iliad " + psgUrn.passageComponent + ", scholion " + s.passageComponent + ": "+ citedText(s))
-      //println("Image: " + documentaryImage(s))
-    //}
 
-    val fileContents = s"#$label\n\n${tableHeader}" + tableRows.mkString("\n") +"\n"
+    val fileContents = s"# $label\n\n${tableHeader}" + tableRows.mkString("\n") +"\n"
     val fileName =  "views/iliad-" + psgUrn.passageComponent + "-scholia.md"
     new PrintWriter(new File(fileName)) { write(fileContents); close }
 
