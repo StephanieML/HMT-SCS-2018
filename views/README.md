@@ -1,0 +1,1 @@
+Reports from scripts are written in this directory in markdown format.
