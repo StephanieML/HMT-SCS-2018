@@ -63,6 +63,7 @@ def citedText(u: CtsUrn, texts : TextRepository = textRepo): String = {
 }
 
 
+// Find documentary image, if any, for a given text passage
 def documentaryImage(u: CtsUrn, imgMap : Vector[IllustratedPassage]  = illustratedPassages): Option[Cite2Urn] = {
   val imgs = illustratedPassages.filter(_.psg ~~ u)
   imgs.size match {
@@ -72,18 +73,15 @@ def documentaryImage(u: CtsUrn, imgMap : Vector[IllustratedPassage]  = illustrat
 }
 
 
+// create a binary image reference linked to ICT2
 def imgLink(u: Cite2Urn) : String = {
   val base = "http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/deepzoom/"
   val width = 400
   s"${base}${u.namespace}/${u.collection}/${u.version}/${u.dropExtensions.objectOption.get}.tif&RGN=${u.objectExtension}" + s"WID=${width}&CVT=JPEG"
-///http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/deepzoom/hmt/vaimg/2017a/VA012RN_0013.tif&RGN=0.1940,0.2074,0.1884,0.03225
-
-//&wID=5000&CVT=JPEG
 }
 
+// Create a markdown table row for a text URN.
 def tableRowForText(u: CtsUrn) : String = {
-
-
   val ict2 = "http://www.homermultitext.org/ict2?urn="
   documentaryImage(u) match {
       case None => "| " + u + " | " + citedText(u ) + " | |"
@@ -100,13 +98,21 @@ def scholia(psg: String): Unit = {
   try {
     val psgUrn = CtsUrn(psg)
     val scholiaVector = scholiaForPassage(psgUrn)
+    val imageUrns = scholiaVector.map(documentaryImage(_)).flatten
+
+    val ict2 = "http://www.homermultitext.org/ict2?urn="
+    val pageOverlay = ict2 + imageUrns.mkString("&urn=")
 
     val label = "Scholia to *Iliad* " + psgUrn.passageComponent
+    val instructions = "Images are linked to highlighted zoomable versions in context.\n\n" +
+    s"See [all scholia highlighted on page image](${pageOverlay})\n\n"
+
+
 
     val tableHeader = "| URN     | Text     | Image |\n| :------------- | :------------- | :------------- |\n"
     val tableRows = scholiaVector.map(tableRowForText(_))
 
-    val fileContents = s"# $label\n\n${tableHeader}" + tableRows.mkString("\n") +"\n"
+    val fileContents = s"# $label\n\n${instructions}${tableHeader}" + tableRows.mkString("\n") +"\n"
     val fileName =  "views/iliad-" + psgUrn.passageComponent + "-scholia.md"
     new PrintWriter(new File(fileName)) { write(fileContents); close }
 
