@@ -27,7 +27,7 @@ The root directory of this repository has a build file that resolves HMT project
 2.  From the console, load a script, e.g., `:load scripts/scholia.sc` (note the colon preceding the `load` command!)
 
 
-### Examples of included scripts
+### Examples of using included scripts
 
 **Display scholia for an *Iliad* line**:  from the sbt console,
 
