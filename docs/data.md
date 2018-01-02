@@ -8,7 +8,7 @@ How Homer Multitext structures its data and why it's awesome
 ## Object, Text, Artifact Triangle
 
 - all data interlinked with highly specific URNs
-- image citation-Iliad line//scholia-manuscript page
+- image citation - *Iliad* 1.1 - 12r of the Venetus A 
   - done in simple .csv files
 - *ceci n'est pas une pipe*
 
