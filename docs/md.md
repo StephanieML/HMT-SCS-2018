@@ -23,13 +23,29 @@ title: Using markdown to display data
 ## where you can find the scripts
 
 
-This repository includes a `scripts` directory with some scripts you can load run from the sbt console.  To do that, start the console:
+This repository includes a `scripts` directory with some scripts you can load run from the sbt console.  
 
-    sbt console
+### Loading and running scripts
 
-Then, at the console prompt, use the sbt `:load` utility to load a  script.  (Note the preceding colon!)  Example:
+The root directory of this repository has a build file that resolves HMT project code libraries with their dependencies, so from the root directory of the repository, you can:
 
-    :load scripts/SCRIPT.sc
+1.  Start an interactive console:  `sbt console`
+2.  From the console, load a script, e.g., `:load scripts/scholia.sc` (note the colon preceding the `load` command!)
+
+
+### Examples of using included scripts
+
+**Display scholia for an *Iliad* line**:  from the sbt console,
+
+    :load scripts/scholia.sc
+    scholia("urn:cts:greekLit:tlg0012.tlg001:1.1")
+
+**Create a facsimile for a codex**:  from the sbt console,
+
+    :load scripts/facsimile.sc
+    facsimile("urn:cite2:hmt:msA:")
+    facsimile("urn:cite2:hmt:msA:", 4) // formats display in 4 columns
+
 
 
 ## To learn more
