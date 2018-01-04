@@ -4,13 +4,13 @@ title: Using markdown to display data
 ---
 
 
-## what is markdown
+## What is markdown
 
 - plain text format
 - simple to write, just like an email
 - simple, clean, no fancy styling
 
-## how are we using it
+## How are we using it
 - documentation
 - displaying data we generate from scripts
 
@@ -20,7 +20,7 @@ title: Using markdown to display data
 - [SBT console](http://www.scala-sbt.org/download.html)
 - [Atom](https://atom.io) (our favorite free editor for markdown and more that has a convenient markdown preview option)
 
-## where you can find the scripts
+## Where you can find the scripts
 
 
 This repository includes a `scripts` directory with some scripts you can load run from the sbt console.  
