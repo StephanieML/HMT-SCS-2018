@@ -17,8 +17,8 @@ title: Citation
 2. `urn:cts:greekLit` :text urn for Greek literature
 3. `urn:cts:greekLit:tlg0012` :text urn for Homeric literature
 4. `urn:cts:greekLit:tlg0012.tlg001` :text urn for the Iliad
-5. `urn:cts:greekLit:tlg0012.tlg001.msA` :text urn for the Venetus A version of the Iliad
-6. `urn:cts:greekLit:tlg0012.tlg001.msA:1.1` :text urn for Book 1 line 1 of the Venetus A Iliad
+5. `urn:cts:greekLit:tlg0012.tlg001.msA` :text urn for the Venetus A version of the *Iliad*
+6. `urn:cts:greekLit:tlg0012.tlg001.msA:1.1` :text urn for Book 1 line 1 of the Venetus A *Iliad*
 
 **urns let you refer to notional works as well as specific versions**
 
