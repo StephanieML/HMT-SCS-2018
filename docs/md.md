@@ -46,7 +46,7 @@ The root directory of this repository has a build file that resolves HMT project
     facsimile("urn:cite2:hmt:msA:")
     facsimile("urn:cite2:hmt:msA:", 4) // formats display in 4 columns
 
-
+**To load the preview, open the markdown file in Atom and then toggle Mardown Preview from the packages menu**
 
 ## To learn more
 
