@@ -14,10 +14,15 @@ title: Citation
 ### What do our text URNs Mean...##
              
 `urn:cts` :text urn
+
 `urn:cts:greekLit` :text urn for Greek literature
+
 `urn:cts:greekLit:tlg0012` :text urn for Homeric literature
+
 `urn:cts:greekLit:tlg0012.tlg001` :text urn for the Iliad
+
 `urn:cts:greekLit:tlg0012.tlg001.msA` :text urn for the Venetus A version of the Iliad
+
 `urn:cts:greekLit:tlg0012.tlg001.msA:1.1` :text urn for Book 1 line 1 of the Venetus A Iliad
 
 **urns let you refer to notional works as well as specific versions**
