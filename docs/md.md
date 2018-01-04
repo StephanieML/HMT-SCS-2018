@@ -6,7 +6,12 @@ title: Using markdown to display data
 
 ## what is markdown
 
+- plain text format
+- simple to write, just like an email
+- simple, clean, no fancy styling
+
 ## how are we using it
+
 
 ## where you can find the scripts
 
