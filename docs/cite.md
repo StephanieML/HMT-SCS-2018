@@ -11,6 +11,20 @@ title: Citation
     -   the [OHCO2 model](http://cite-architecture.github.io/ohco2/) and [CTS URNs](http://cite-architecture.github.io/ctsurn/)
     -   the [CITE2 model](http://cite-architecture.github.io/cite2/) of data collections, and [CITE2 URNS](http://cite-architecture.github.io/cite2urn/)
 
-### What does a URN Mean...##
+### What do our text URNs Mean...##
+             
+`urn:cts` :text urn
+`urn:cts:greekLit` :text urn for Greek literature
+`urn:cts:greekLit:tlg0012` :text urn for Homeric literature
+`urn:cts:greekLit:tlg0012.tlg001` :text urn for the Iliad
+`urn:cts:greekLit:tlg0012.tlg001.msA` :text urn for the Venetus A version of the Iliad
+`urn:cts:greekLit:tlg0012.tlg001.msA:1.1` :text urn for Book 1 line 1 of the Venetus A Iliad
 
-fill some stuff in later, they're gonna be able to input a URN and get some sweet texts
+**urns let you refer to notional works as well as specific versions**
+
+### URNs for Objects
+
+We also use URNs for citable objects and images, completing our text,image,artifact triangle
+
+e.g. urn:cite2:hmt:msA.12r (folio 12r of the Venetus as a notional object, can be linked to multiple images and contains multiple texts)
+
