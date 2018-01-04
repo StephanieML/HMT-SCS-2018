@@ -7,7 +7,7 @@
 //
 //  where URN is a CTS URN identifying a line of the Iliad.
 
-val texts = "data/sample/va1-iliad-mains.cex"
+val texts = "data/sample/va1.cex"
 val commentsIndex = "data/sample/scholiaToIliad-1.cex"
 val dseCex =  "data/sample/va1-dse.cex"
 
