@@ -28,3 +28,6 @@ We also use URNs for citable objects and images, completing our text,image,artif
 
 e.g. urn:cite2:hmt:msA.12r (folio 12r of the Venetus as a notional object, can be linked to multiple images and contains multiple texts)
 
+### What can you do with our data?
+
+Because all these relationships are defined in our data, you can input text and object urns and get associated items (e.g. all the scholia that are on 12r or the image where line 1 appears)
