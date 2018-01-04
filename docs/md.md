@@ -7,7 +7,7 @@ title: Using markdown to display data
 ## What is markdown
 
 - plain text format
-- simple to write, just like an email
+- just like writing an email
 - simple, clean, no fancy styling
 
 ## How are we using it
