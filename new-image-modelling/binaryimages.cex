@@ -1,0 +1,26 @@
+
+
+////////////////////////////////////////
+// Binary image collections:
+//
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:hmt:binaryimg.v1:#Collections of binary images#urn:cite2:hmt:binaryimg.v1:label##Public domain
+
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:hmt:binaryimg.v1.urn:#Cite2Urn#
+urn:cite2:hmt:binaryimg.v1.label:#String#
+urn:cite2:hmt:binaryimg.v1.collection:#String#
+urn:cite2:hmt:binaryimg.v1.protocol:#String#iiif,iip
+urn:cite2:hmt:binaryimg.v1.path:#String#
+urn:cite2:hmt:binaryimg.v1.rights:#String#
+
+#!citedata
+urn#label#collection#protocol#path#rights
+urn:cite2:hmt:binaryimg.v1.urn:vaimg#Binary data for images of the Venetus A manuscript#urn:cite2:hmt:vaimg.2017a:#iip#Creative Commons Attribution Share-Alike.
+
+
+// END data model collections
+/////////////////////////////////////////
