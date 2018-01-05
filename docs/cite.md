@@ -20,7 +20,7 @@ title: Citation
 5. `urn:cts:greekLit:tlg0012.tlg001.msA` :text urn for the Venetus A version of the *Iliad*
 6. `urn:cts:greekLit:tlg0012.tlg001.msA:1.1` :text urn for Book 1 line 1 of the Venetus A *Iliad*
 
-**urns let you refer to notional works as well as specific versions**
+**URNs let you refer to notional works as well as specific versions**
 
 ### URNs for Objects
 
@@ -30,4 +30,4 @@ e.g. urn:cite2:hmt:msA.12r (folio 12r of the Venetus as a notional object, can b
 
 ### What can you do with our data?
 
-Because all these relationships are defined in our data, you can input text and object urns and get associated items (e.g. all the scholia that are on 12r or the image where line 1 appears)
+Because all these relationships are defined in our data, you can input text and object urns and get associated items (e.g. all the scholia that are on 12r or the image where line 1.1 appears)
