@@ -11,6 +11,7 @@ How Homer Multitext structures its data and why it's awesome
 - image citation - *Iliad* 1.1 - 12r of the Venetus A 
   - done in simple .csv files
 - *ceci n'est pas une pipe*
+  - the image citation of a portion of 12r is *not* the same as the physical page 12r
 
 
 ## CEX tables
