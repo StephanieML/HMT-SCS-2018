@@ -3,7 +3,7 @@ layout: page
 title: N-grams
 ---
 
-Using N-Grams to Explore Formulaic Language #
+# Using N-Grams to Explore Formulaic Language #
 
 ## What is an n-gram ##
 
