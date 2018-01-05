@@ -1,13 +1,13 @@
 ---
 layout: page
-title: N-grams
+title: n-grams
 ---
 
-# Using N-Grams to Explore Formulaic Language #
+# Using n-grams to Explore Formulaic Language #
 
 ## What is an n-gram ##
 
-A string of N number of words (or letters), usually used to find repeated phrases in a corpus. Today, we'll look at Ngrams in the Homeric scholia
+A string of *n* number of words (or letters), usually used to find repeated phrases in a corpus. Today, we'll look at n-grams in the Homeric scholia.
 
 ## How to use the tool
 
