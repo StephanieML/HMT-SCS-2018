@@ -20,6 +20,8 @@ title: Citation
 5. `urn:cts:greekLit:tlg0012.tlg001.msA` :text urn for the Venetus A version of the *Iliad*
 6. `urn:cts:greekLit:tlg0012.tlg001.msA:1.1` :text urn for Book 1 line 1 of the Venetus A *Iliad*
 
+*note you will also see tlg5026 to refer to the Homeric scholia today*
+
 **URNs let you refer to notional works as well as specific versions**
 
 ### URNs for Objects
@@ -31,3 +33,11 @@ e.g. urn:cite2:hmt:msA.12r (folio 12r of the Venetus as a notional object, can b
 ### What can you do with our data?
 
 Because all these relationships are defined in our data, you can input text and object urns and get associated items (e.g. all the scholia that are on 12r or the image where line 1.1 appears)
+
+### Let's Explore in Our Cite Environment
+
+[Cite Environment](
+http://folio.furman.edu/cite-1.3.4.html)
+
+1. **Browse text** will let you explore content we have preloaded into the tool for you (Book 1 of the Venetus, Iliad and Scholia)
+2. **Explore texts** has some fun tools to help you further explore the corpus (we recommend avoiding breathings and accents in string search because unicode can be problematic)
