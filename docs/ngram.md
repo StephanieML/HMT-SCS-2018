@@ -7,7 +7,7 @@ title: N-grams
 
 ## What is an n-gram ##
 
-Succint and appropriate definition
+A string of N number of words (or letters), usually used to find repeated phrases in a corpus. Today, we'll look at Ngrams in the Homeric scholia
 
 ## How to use the tool
 
