@@ -15,6 +15,9 @@ How Homer Multitext structures its data and why it's awesome
 
 
 ## CEX tables
+- simple tabular files for everything create these relationships
+- X text is illustrated by Y image
+- X text content corresponds to Y citable text
 
 ## Using generic tools on technology-independent data
 
