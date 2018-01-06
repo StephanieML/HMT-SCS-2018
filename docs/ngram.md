@@ -6,7 +6,7 @@ title: string searches and n-grams
 
 # string searches #
 
-String searches are naturally quite fun and something that still needs to be done more comprehensively in the Homeric scholia. Fun ones you might want to check out would be searches for the Homeric scholars Ζηνοδοτος and Αρισταρχος. The tool will bring up all the passages where they appear for you to look at more closely. 
+String searches are naturally quite fun and something that still needs to be done more comprehensively in the Homeric scholia. Fun ones you might want to check out would be searches for the Homeric editors Ζηνοδοτος and Αρισταρχος. The tool will bring up all the passages where they appear for you to look at more closely. 
 
 # Using n-grams to Explore Formulaic Language #
 
